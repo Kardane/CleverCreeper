@@ -1,7 +1,7 @@
 # Clever Creeper
 
 ## This project was forked from [Creeper AI Updated](https://github.com/SrGnis/Creeper_AI_Updated/) by SrGnis!
-
+Thanks @SrGnis!
 
 
 
