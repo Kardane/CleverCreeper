@@ -4,6 +4,10 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/CleverCreeper.main.iml" filepath="$PROJECT_DIR$/.idea/modules/CleverCreeper.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/CleverCreeper.test.iml" filepath="$PROJECT_DIR$/.idea/modules/CleverCreeper.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/IdeaProjects.CleverCreeper.main.iml" filepath="$PROJECT_DIR$/.idea/modules/IdeaProjects.CleverCreeper.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/IdeaProjects.CleverCreeper.test.iml" filepath="$PROJECT_DIR$/.idea/modules/IdeaProjects.CleverCreeper.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/org.karn.CleverCreeper.main.iml" filepath="$PROJECT_DIR$/.idea/modules/org.karn.CleverCreeper.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/org.karn.CleverCreeper.test.iml" filepath="$PROJECT_DIR$/.idea/modules/org.karn.CleverCreeper.test.iml" />
     </modules>
   </component>
 </project>

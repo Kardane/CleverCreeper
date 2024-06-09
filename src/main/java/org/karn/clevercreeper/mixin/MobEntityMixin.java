@@ -40,17 +40,15 @@ public abstract class MobEntityMixin extends LivingEntity {
             CreeperEntity centity = ((CreeperEntity)object);
             GameRules gameRules = centity.getWorld().getGameRules();
 
-            //follow range
-            //centity.getAttributeInstance(EntityAttributes.GENERIC_FOLLOW_RANGE).setBaseValue(gameRules.getInt(CCGamerules.FOLLOW_RANGE));
+            int power = (int) Math.random()*(gameRules.getInt(CCGamerules.MAX_POWER) - gameRules.getInt(CCGamerules.MIN_POWER) + 1) + gameRules.getInt(CCGamerules.MIN_POWER);
+            NbtCompound tag = new NbtCompound();
+            centity.writeCustomDataToNbt(tag);
+            tag.putByte("ExplosionRadius", (byte) power);
+            centity.readCustomDataFromNbt(tag);
 
-            //sync size power
-            //if(centity.getWorld().getGameRules().getBoolean(CCGamerules.SYNC_SIZE_POWER)){
-            //    double baseValue = centity.getAttributeInstance(EntityAttributes.GENERIC_SCALE).getBaseValue();
-            //    NbtCompound tag = new NbtCompound();
-            //    centity.writeCustomDataToNbt(tag);
-            //    tag.putByte("ExplosionRadius", (byte) Math.floor(baseValue*3));
-            //    centity.readCustomDataFromNbt(tag);
-            //}
+            if(gameRules.getBoolean(CCGamerules.SYNC_SIZE_POWER) && (double) power/3 != centity.getAttributeInstance(EntityAttributes.GENERIC_SCALE).getBaseValue()){
+                centity.getAttributeInstance(EntityAttributes.GENERIC_SCALE).setBaseValue((double) ((CreeperEntityAccessor) centity).getExplosionRadius()/3);
+            }
 
             GoalSelector targets = ((MobEntityAccessor) centity).getTargetSelector();
             Set<PrioritizedGoal> tGoals = ((GoalSelectorAccessor) targets).getGoals();

@@ -21,11 +21,15 @@ public class CreeperEntityMixin {
         if(centity.getAttributeInstance(EntityAttributes.GENERIC_FOLLOW_RANGE).getBaseValue() != gameRules.getInt(CCGamerules.FOLLOW_RANGE))
             centity.getAttributeInstance(EntityAttributes.GENERIC_FOLLOW_RANGE).setBaseValue(gameRules.getInt(CCGamerules.FOLLOW_RANGE));
 
+        if(gameRules.getBoolean(CCGamerules.SYNC_SIZE_POWER) && (double) ((CreeperEntityAccessor) centity).getExplosionRadius()/3 != ScalebaseValue){
+            centity.getAttributeInstance(EntityAttributes.GENERIC_SCALE).setBaseValue((double) ((CreeperEntityAccessor) centity).getExplosionRadius()/3);
+        }
+        /*
         if(gameRules.getBoolean(CCGamerules.SYNC_SIZE_POWER) && Math.floor(ScalebaseValue*3) != ((CreeperEntityAccessor)centity).getExplosionRadius()){
             NbtCompound tag = new NbtCompound();
             centity.writeCustomDataToNbt(tag);
             tag.putByte("ExplosionRadius", (byte) Math.floor(ScalebaseValue*3));
             centity.readCustomDataFromNbt(tag);
-        }
+        }*/
     }
 }
