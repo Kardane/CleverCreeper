@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "id": "clevercreeper",
+  "version": "${version}",
+  "name": "CleverCreeper",
+  "description": "Make Creepers Clever! Oww Man!",
+  "authors": ["Karn"],
+  "contact": {
+    "repo": "https://github.com/parkj/CleverCreeper"
+  },
+  "license": "All-Rights-Reserved",
+  "icon": "assets/clevercreeper/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "org.karn.clevercreeper.CleverCreeper"
+    ]
+  },
+  "mixins": [
+    "clevercreeper.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric": "*",
+    "minecraft": "${minecraft_version}"
+  }
+}

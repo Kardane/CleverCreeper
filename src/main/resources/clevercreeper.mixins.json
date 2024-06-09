@@ -1,0 +1,19 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "org.karn.clevercreeper.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": [
+    "MobEntityMixin",
+    "CreeperEntityMixin",
+    "ActiveTargetGoalAccessor",
+    "CreeperEntityAccessor",
+    "EntityNavigationAccessor",
+    "GoalSelectorAccessor",
+    "MobEntityAccessor",
+    "TrackTargetGoalAccessor"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
