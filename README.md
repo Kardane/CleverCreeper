@@ -3,7 +3,17 @@
 ## This project was forked from [Creeper AI Updated](https://github.com/SrGnis/Creeper_AI_Updated/) by SrGnis!
 Thanks @SrGnis!
 
-
+What's Changed:
+- Config setting has moved to gamerules.
+- Starting with `/gamerule CleverCreeper`.
+- `/gamerule CleverCreeper_syncSizeAndPower` - Sync Creeper Scale based on explosion power. `Default: true`
+- `/gamerule CleverCreeper_followRange` - Configure the follow range of creepers. `Default: 16`
+- `/gamerule CleverCreeper_enableXray` - Allow Creeper see through walls. `Default: false`
+- `/gamerule CleverCreeper_breachWalls` - Allow Creeper to breach walls. `Default: false`
+- `/gamerule CleverCreeper_breachWallsRange` - Configure the range where creepers can decide to breach walls. `Default: 64`
+- `/gamerule CleverCreeper_doBounceAttack` - Allow Creeper to leap at targets like spiders do. `Default: false`
+- `/gamerule CleverCreeper_minExplosionPower` - Configure the minimum explosion power of creepers. `Default: 3`
+- `/gamerule CleverCreeper_maxExplosionPower` - Configure the maximum explosion power of creepers. `Default: 3`
 
 
 Previous description from Creeper AI Updated are below:
