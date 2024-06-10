@@ -11,8 +11,8 @@ public class CCGamerules {
     public static final GameRules.Key<GameRules.BooleanRule> BREACH_WALLS = GameRuleRegistry.register("CleverCreeper_breachWalls", GameRules.Category.MOBS, GameRuleFactory.createBooleanRule(true));
     public static final GameRules.Key<GameRules.IntRule> BREACH_WALLS_RANGE = GameRuleRegistry.register("CleverCreeper_breachWallsRange", GameRules.Category.MOBS, GameRuleFactory.createIntRule(64,1));
     public static final GameRules.Key<GameRules.BooleanRule> BOUNCE_ATTACK = GameRuleRegistry.register("CleverCreeper_doBounceAttack", GameRules.Category.MOBS, GameRuleFactory.createBooleanRule(false));
-    public static final GameRules.Key<GameRules.IntRule> MIN_POWER = GameRuleRegistry.register("CleverCreeper_minExplosionPower", GameRules.Category.MOBS, GameRuleFactory.createIntRule(2,1));
-    public static final GameRules.Key<GameRules.IntRule> MAX_POWER = GameRuleRegistry.register("CleverCreeper_maxExplosionPower", GameRules.Category.MOBS, GameRuleFactory.createIntRule(6,Integer.MAX_VALUE));
+    public static final GameRules.Key<GameRules.IntRule> MIN_POWER = GameRuleRegistry.register("CleverCreeper_minExplosionPower", GameRules.Category.MOBS, GameRuleFactory.createIntRule(2,1,Integer.MAX_VALUE));
+    public static final GameRules.Key<GameRules.IntRule> MAX_POWER = GameRuleRegistry.register("CleverCreeper_maxExplosionPower", GameRules.Category.MOBS, GameRuleFactory.createIntRule(6,1,Integer.MAX_VALUE));
 
 
     public static void init(){
